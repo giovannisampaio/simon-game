@@ -1,0 +1,219 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************** 
+SIMON 
+********************/
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simon {
+  position: relative;
+}
+
+.score {
+  width: 20vmin;
+  height: 5vmin;
+  background-color: black;
+  color: white;
+}
+
+.side {
+  height: 40vmin;
+  width: 40vmin;
+}
+
+.green {
+  background-color: #00906A;
+  border-top-left-radius: 100%;
+  border: 3vmin solid #333;
+  border-right-width: 1.5vmin;
+  border-bottom-width: 1.5vmin;
+  box-shadow: 0 0 2.5vmin #333;
+}
+.red {
+  background-color: #DC1A1C;
+  border-top-right-radius: 100%;
+  border: 3vmin solid #333;
+  border-left-width: 1.5vmin;
+  border-bottom-width: 1.5vmin;
+  box-shadow: 0 0 2.5vmin #333;
+}
+.yellow {
+  background-color: #EFCF49;
+  border-bottom-left-radius: 100%;
+  border: 3vmin solid #333;
+  border-right-width: 1.5vmin;
+  border-top-width: 1.5vmin;
+  box-shadow: 0 0 2.5vmin #333;
+}
+.blue {
+  background-color: #0072A5;
+  border-bottom-right-radius: 100%;
+  border: 3vmin solid #333;
+  border-left-width: 1.5vmin;
+  border-top-width: 1.5vmin;
+  box-shadow: 0 0 2.5vmin #333;
+}
+
+.middle {
+  height: 40vmin;
+  width: 40vmin;
+  background-color: #ECE7EE;
+  border-radius: 100%;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  top: 17vmin;
+  border: 3vmin solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.score {
+  font-family: monospace;
+  width: 5vmin;
+  padding-top: 3vmin;
+  margin-right: 4vmin;
+  text-align: center;
+  font-size: 2vmin;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-size: 6vmin;
+  font-weight: 900;
+  margin-bottom: 4vmin;
+}
+
+.start {
+  background-color: #EFCF49;
+  font-family: monospace;
+  font-size: 1.5vmin;
+  height: 6vmin;
+  width: 6vmin;
+  text-align: center;
+  border: 1px solid #555555;
+  margin-right: 2vmin;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 3px #999;
+}
+
+.start:hover {background-color: #3e8e41}
+
+.start:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 6vmin;
+  height: 3.8vmin;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 2vmin;
+  width: 2vmin;
+  left: 1vmin;
+  bottom: 1vmin;
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(2vmin);
+  -ms-transform: translateX(2vmin);
+  transform: translateX(2 vmin);
+}
